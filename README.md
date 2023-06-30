@@ -1,1 +1,2 @@
-# IntraJ-LSP
+# IntraJ-IDE
+IntraJ meets MagpieBridge. 

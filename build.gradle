@@ -1,0 +1,66 @@
+plugins {
+  id 'java'
+}
+
+
+
+sourceSets.main {
+  java {
+    srcDir 'src/java'
+  }
+
+  repositories {
+    mavenLocal()
+    mavenCentral()
+    flatDir { dirs "tools" }
+  }
+  
+  dependencies {
+    implementation project(':IntraJ')
+     implementation files('tools/magpiebridge-0.1.6-SNAPSHOT-jar-with-dependencies.jar')
+    implementation 'com.sun.net.httpserver:http:20070405'
+    implementation group: 'org.freemarker', name: 'freemarker', version: '2.3.29'
+  }
+}
+
+
+
+
+compileJava.dependsOn ':IntraJ:build'
+
+
+
+task vsce(type:Exec) {
+    workingDir "."
+
+         commandLine 'sh', 'generate_vsce.sh'
+         println "DETECTED OS: not windows. Running `generate_vsce.sh`"
+    
+    
+    standardOutput = new ByteArrayOutputStream()
+
+    ext.output = {
+        return standardOutput.toString()
+    }
+}
+vsce.dependsOn 'build'
+
+
+task vscode(type: Jar) { 
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+
+    from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } } {
+        exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
+    }
+    from sourceSets.main.output
+    manifest {
+        attributes 'Main-Class': 'org.extendj.IntraJPlugin'
+    }
+    baseName = 'intraj'
+    destinationDir= file('vscode')
+}
+
+
+artifacts {
+  archives vscode
+}

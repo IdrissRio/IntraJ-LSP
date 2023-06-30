@@ -1,0 +1,117 @@
+{
+	"name": "IntraJ",
+	"description": "IntraJ: fast and accurate intra-procedural dataflow analyses",
+	"author": "Idriss Riouak",
+	"license": "EPL-2.0",
+	"icon": "logo.png",
+	"version": "0.0.9",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lu-cs-sde/IntraJ.git"
+	},
+	"publisher": "IdrissRiouak",
+	"categories": [],
+	"keywords": [
+		"intraprocedural",
+		"dataflow",
+		"analysis",
+		"java",
+		"source-level",
+		"static-analysis",
+		"program-analysis",
+		"control-flow graph",
+		"control-flow analysis"
+	],
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"activationEvents": [
+		"onLanguage:java"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "IntraJ",
+			"properties": {
+				"intraj.trace.server": {
+					"scope": "window",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the language server."
+				},
+				"intraj.checks.DAA": {
+					"type": "boolean",
+					"description": "Unused Assignment",
+					"link": "https://idrissrio.github.io/intraj/docs/checks/daa/",
+					"default": true,
+					"scope": "resource"
+				},
+				"intraj.checks.NPA": {
+					"type": "boolean",
+					"description": "Null Pointer Access",
+					"link": "https://idrissrio.github.io/intraj/docs/checks/npe/",
+					"default": true,
+					"scope": "resource"
+				},
+				"intraj.checks.AUMG": {
+					"type": "boolean",
+					"description": "Avoid Using Magic Numbers",
+					"link": "https://idrissrio.github.io/intraj/docs/codesmells/avoidusingmagicnumbers/",
+					"default": true,
+					"scope": "resource"
+				},
+				"intraj.checks.STREQ": {
+					"type": "boolean",
+					"description": "Avoid Using `==` to Compare Strings",
+					"link": "N/A",
+					"default": true,
+					"scope": "resource"
+				},
+				"intraj.checks.IMPDAA": {
+					"type": "boolean",
+					"description": "Implicit Unused Assignment",
+					"link": "https://idrissrio.github.io/intraj/docs/checks/idaa/",
+					"default": true,
+					"scope": "resource"
+				},
+				"intraj.checks.EMPTYIF": {
+					"type": "boolean",
+					"description": "Empty If Statement",
+					"link": "https://idrissrio.github.io/intraj/docs/codesmells/emptyif/",
+					"default": true,
+					"scope": "resource"
+				},
+				"intraj.checks.EMPTYWHILE": {
+					"type": "boolean",
+					"description": "Empty While Statement",
+					"link": "https://idrissrio.github.io/intraj/docs/codesmells/emptywhile/",
+					"default": true,
+					"scope": "resource"
+				}
+				
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^5.2.1"
+	},
+	"devDependencies": {
+		"vscode": "^1.1.33",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^11.13.0",
+		"tslint": "^5.15.0",
+		"typescript": "^3.4.2"
+	}
+}
