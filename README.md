@@ -34,7 +34,7 @@ We provide two different ways of getting and running **IntraJ-LSP**:
 To install IntraJ as a VSCode extension, follow these steps:
 
 1. Install the [VSCode](https://code.visualstudio.com) editor.
-2. Install the [IntraJ] extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=IdrissRiouak.IntraJ).
+2. Install the extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=IdrissRiouak.IntraJ).
 
 [See instruction video  on YouTube](https://www.youtube.com/watch?v=0sGQnrybMjY&ab_channel=IdrissRiouak)
 
@@ -43,10 +43,9 @@ To install IntraJ as a VSCode extension, follow these steps:
 # Build IntraJ from the source code
 ## Prerequisites
 
-We have run IntraJ on the following Java version:
+To build __IntraJ-LSP__ the following tools are required:
 
 *  **Java SDK version 8**. (tested with  SDK 1.8.0_275. See [sdkman](https://sdkman.io)).
-*  **Gradle version 7.2**. 
 *  **VSCode Editor**. (tested with 1.79.2. See [VSCode](https://code.visualstudio.com)).
 
 
@@ -88,8 +87,8 @@ IntraJ-LSP
     ├── tools                                # IntraJ source code
     |    └── magpiebridge.jar                # Custom version of Jastadd
     ├── vscode                               # VSCode extension source code
-    |    ├── intraj.jar 					 # IntraJ jar file
-    |    └── package.json  				     # VSCode extension manifest
+    |    ├── intraj.jar 		     # IntraJ jar file
+    |    └── package.json  		     # VSCode extension manifest
     ├── LICENSE
     └── README.md
 ```
@@ -106,7 +105,7 @@ The directory is structured as follow:
     |    ├── jastadd                  
     |    |     ├── CFG                       # CFG spec in Jastadd
     |    |     ├── StaticAnalysis            # Folder containing code-smells and data-flow analyses
-	  |    |     └── utils                     # Helpers for IntraJ
+	  |    |     └── utils               # Helpers for IntraJ
     |    └── java
     |          ├── utils                     # General helpers for visualisation
     |          └── test                      # JUnit test spec
@@ -144,10 +143,10 @@ The directory is structured as follow:
          └── StaticAnalysis                              # Data flow analyses spec  (Paper §4)
                ├── CodeSmells                            # CodeSmells
                └── DataFlow                              # Dataflow Analyses
-					├── DeadAssignment.jrag              #                          (Paper §4.c)
-					├── ImplicitDeadAssignment.jrag      #                          (Paper §4.c)
-					├── LiveVariableAnalysis.jrag        #                          (Paper §4.c)
-					├── NullAnalysis.jrag                #                          (Paper §4.c)	
+			├── DeadAssignment.jrag              #                          (Paper §4.c)
+			├── ImplicitDeadAssignment.jrag      #                          (Paper §4.c)
+			├── LiveVariableAnalysis.jrag        #                          (Paper §4.c)
+			├── NullAnalysis.jrag                #                          (Paper §4.c)	
                		└── ReachingDefintion.jrag           #                          (Paper §4.c)
 
 ---
@@ -159,7 +158,7 @@ The directory is structured as follow:
  - 🔗 **[ExtendJ](https://extendj.org)**: extensible Java compiler built using JastAdd. We built **IntraJ** as an Static Analysis Extension of ExtendJ. More can be found [here](https://bitbucket.org/extendj/analysis-template/src/master/). 
 
 # Awards 
-IntraJ was awarded with the Research Object Badge (ROR) and the Open Research Badge  
+__IntraJ__ was awarded with the Research Object Badge (ROR) and the Open Research Badge  
 and the Open Research Badge (ORO) at ROSE Track of ICSME 2021.
 
 |_**Repository**_|[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5296618.svg)](https://doi.org/10.5281/zenodo.5296618)|
