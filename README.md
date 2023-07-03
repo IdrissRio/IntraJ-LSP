@@ -6,7 +6,7 @@
 
 This repository contains the artifact of the following two papers:
 
-* __IntraJ: an On-demand Framework For Intraprocedural Java Code Analysis__, _[Idriss Riouak 🔗](https://orcid.org/0000-0003-3520-2262), [Görel Hedin 🔗](https://orcid.org/0000-0002-3003-2623), [Niklas Fors 🔗](https://orcid.org/0000-0003-2714-9457), and [Christoph Reichenbach 🔗](https://orcid.org/0000-0003-0608-7023),_.
+* __IntraJ: an On-demand Framework For Intraprocedural Java Code Analysis__, _[Idriss Riouak 🔗](https://orcid.org/0000-0003-3520-2262), [Görel Hedin 🔗](https://orcid.org/0000-0002-3003-2623), [Niklas Fors 🔗](https://orcid.org/0000-0003-2714-9457), and [Christoph Reichenbach 🔗](https://orcid.org/0000-0003-0608-7023),_. Submitted to the Journal of System and Software.
 
 
 
@@ -15,9 +15,9 @@ This repository contains the artifact of the following two papers:
 
 The repository contains:
 
-* IntraJ-LSP, an LSP-based plugin for the [VSCode](https://code.visualstudio.com) editor, which allows you to run IntraJ on Java source code.
+* _IntraJ-LSP_: an _LSP_-based plugin for the [VSCode](https://code.visualstudio.com) editor, which allows you to run IntraJ on Java source code.
 
-* A snapshot of **IntraJ** and all its submodules ([479e927](https://github.com/lu-cs-sde/IntraCFG/tree/479e9272809324296b623c6ff6872f216a10093d)):
+* **IntraJ**: a static analyser for Java source code and all its submodules:
 	- [IntraCFG](https://github.com/lu-cs-sde/IntraCFG): a language-independent framework for control-flow analysis
 	- [ExtendJ](https://extendj.org): a Java compiler implemented using JastAdd
 	- [JastAdd](https://jastadd.org): a metacompiler supporting reference attribute grammars
@@ -27,20 +27,21 @@ The repository contains:
 ---
 # Get the IntraJ-LSP artifact
 We provide two different ways of getting and running **IntraJ-LSP**:
-  * Install IntraJ as a VSCode extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=IdrissRiouak.IntraJ). (Recommended)
-  * Build IntraJ-LSP from the artifact source code.
+  * Install _IntraJ-LSP_ as a VSCode extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=IdrissRiouak.IntraJ). (Recommended)
+  * Build _IntraJ-LSP_ from the artifact source code.
 
-## Install IntraJ as a VSCode extension
+## Install IntraJ as a VSCode extension (i.e., IntraJ-LSP)
 To install IntraJ as a VSCode extension, follow these steps:
 
 1. Install the [VSCode](https://code.visualstudio.com) editor.
-2. Install the extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=IdrissRiouak.IntraJ).
+	1. Install the extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=IdrissRiouak.IntraJ).
+ 	2. Alternatively, search for `IntraJ` in the VSCode Extensions Marketplace.
 
-[See instruction video  on YouTube](https://www.youtube.com/watch?v=0sGQnrybMjY&ab_channel=IdrissRiouak)
+[See instruction video on YouTube](https://www.youtube.com/watch?v=0sGQnrybMjY&ab_channel=IdrissRiouak)
 
 
 
-# Build IntraJ from the source code
+# Build IntraJ-LSP from the source code
 ## Prerequisites
 
 To build __IntraJ-LSP__ the following tools are required:
@@ -154,7 +155,7 @@ The directory is structured as follow:
 
 # Other IntraJ's Use Cases
 ## Use IntraJ as a standalone tool
-To use IntraJ as a standalone tool, visit the [IntraJ repository](https://github.com/lu-cs-sde/IntraJ) and follow the instructions.
+To use IntraJ as a standalone tool, visit the [IntraJ repository](https://github.com/lu-cs-sde/IntraJ) and follow the instructions in the [README.md](https://github.com/lu-cs-sde/IntraJ/README.md) .
 
 ## Integration of IntraJ in CodeProber
 To use IntraJ in CodeProber, visit the following [webpage](https://zenodo.org/record/7185243) and follow
