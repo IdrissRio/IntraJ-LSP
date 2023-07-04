@@ -6,11 +6,11 @@
 
 This repository contains the artifact of the following two papers:
 
-* __IntraJ: an On-demand Framework For Intraprocedural Java Code Analysis__, _[Idriss Riouak 🔗](https://orcid.org/0000-0003-3520-2262), [Görel Hedin 🔗](https://orcid.org/0000-0002-3003-2623), [Niklas Fors 🔗](https://orcid.org/0000-0003-2714-9457), and [Christoph Reichenbach 🔗](https://orcid.org/0000-0003-0608-7023),_. Submitted to the Journal of System and Software.
+*Paper I: __IntraJ: an On-demand Framework For Intraprocedural Java Code Analysis__, _[Idriss Riouak 🔗](https://orcid.org/0000-0003-3520-2262), [Görel Hedin 🔗](https://orcid.org/0000-0002-3003-2623), [Niklas Fors 🔗](https://orcid.org/0000-0003-2714-9457), and [Christoph Reichenbach 🔗](https://orcid.org/0000-0003-0608-7023),_. Submitted to the Journal of System and Software.
 
 
 
-* __[A Precise Framework for Source-Level Control-Flow Analysis](https://github.com/lu-cs-sde/IntraJSCAM2021/blob/main/intraj-preprint.pdf)__, _[Idriss Riouak 🔗](https://orcid.org/0000-0003-3520-2262), [Christoph Reichenbach 🔗](https://orcid.org/0000-0003-0608-7023), [Görel Hedin 🔗](https://orcid.org/0000-0002-3003-2623) and [Niklas Fors 🔗](https://orcid.org/0000-0003-2714-9457)_. _To appear at the 21st IEEE International Working Conference on Source Code Analysis & Manipulation, 2021 ([SCAM 2021 🔗](http://www.ieee-scam.org/2021))._
+*Paper II:  __[A Precise Framework for Source-Level Control-Flow Analysis](https://github.com/lu-cs-sde/IntraJSCAM2021/blob/main/intraj-preprint.pdf)__, _[Idriss Riouak 🔗](https://orcid.org/0000-0003-3520-2262), [Christoph Reichenbach 🔗](https://orcid.org/0000-0003-0608-7023), [Görel Hedin 🔗](https://orcid.org/0000-0002-3003-2623) and [Niklas Fors 🔗](https://orcid.org/0000-0003-2714-9457)_. _To appear at the 21st IEEE International Working Conference on Source Code Analysis & Manipulation, 2021 ([SCAM 2021 🔗](http://www.ieee-scam.org/2021))._
 
 
 The repository contains:
@@ -82,12 +82,12 @@ IntraJ-LSP
     ├── build                                # Compiled files
     ├── IntraJ                               # IntraJ source code
     ├── src/java                             # IntraJ source code
-    |    ├── magpiebridge                    # MagpieBridge source code 
+    |    ├── magpiebridge                    # MagpieBridge source code  
     |    └── java
-    |          └── IntraJPlugin.java         # Entry point for the plugin
+    |          └── IntraJPlugin.java         # Entry point for the plugin   (Paper I §3)
     ├── tools                                # IntraJ source code
-    |    └── magpiebridge.jar                # Custom version of Jastadd
-    ├── vscode                               # VSCode extension source code
+    |    └── magpiebridge.jar                # Custom version of Jastadd    (Paper I §3)
+    ├── vscode                               # VSCode extension source code (Paper I §3)
     |    ├── intraj.jar 		     # IntraJ jar file
     |    └── package.json  		     # VSCode extension manifest
     ├── LICENSE
@@ -128,27 +128,27 @@ The directory is structured as follow:
          ├── CFG
          |    ├── IntraCFG
          |    |    ├── CFG.ast                           # Lang-independent nodes
-         |    |    └── IntraCFG.jrag                     # IntraCFG spec in Jastadd (Paper §2.b)
-         |    ├── java4                                  #                          (Paper §3)
+         |    |    └── IntraCFG.jrag                     # IntraCFG spec in Jastadd 
+         |    ├── java4                                  #                          (Paper II §3)
          |    |    ├── Cache.jrag                        # Cache settings
-         |    |    ├── Exception.jrag                    # Exception spec           (Paper §3.c)
-         |    |    ├── Initializer.jrag                  # Initializers spec        (Paper §3.b)
+         |    |    ├── Exception.jrag                    # Exception spec           (Paper II §3.c)
+         |    |    ├── Initializer.jrag                  # Initializers spec        (Paper II §3.b)
          |    |    ├── Java4.jrag                        # Java4 spec
          |    |    └── ImplictNodes.ast                  # Reified nodes
-         |    ├── java5                                  #                          (Paper §3)
+         |    ├── java5                                  #                          (Paper II §3)
          |    |     └── Java5.jrag                       # Java5 spec
-         |    └── java7                                  #                          (Paper §3)
+         |    └── java7                                  #                          (Paper II §3)
          |    |      └── Java7.jrag                      # Java7 spec
 	 |    └── java8                                  #                         
          |          └── Java8.jrag                       # Java8 spec
-         └── StaticAnalysis                              # Data flow analyses spec  (Paper §4)
+         └── StaticAnalysis                              # Data flow analyses spec  (Paper II §4)
                ├── CodeSmells                            # CodeSmells
                └── DataFlow                              # Dataflow Analyses
-			├── DeadAssignment.jrag              #                          (Paper §4.c)
-			├── ImplicitDeadAssignment.jrag      #                          (Paper §4.c)
-			├── LiveVariableAnalysis.jrag        #                          (Paper §4.c)
-			├── NullAnalysis.jrag                #                          (Paper §4.c)	
-               		└── ReachingDefintion.jrag           #                          (Paper §4.c)
+			├── DeadAssignment.jrag              #                       (Paper II §4.c)
+			├── ImplicitDeadAssignment.jrag      #                       (Paper II §4.c)
+			├── LiveVariableAnalysis.jrag        #                       (Paper II §4.c)
+			├── NullAnalysis.jrag                #                       (Paper II §4.c)	
+               		└── ReachingDefintion.jrag           #                       (Paper II §4.c)
 
 ---
 
