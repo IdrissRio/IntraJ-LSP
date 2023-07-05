@@ -162,7 +162,14 @@ The directory is structured as follow:
 
 # Other IntraJ's Use Cases
 ## Use IntraJ as a standalone tool
-To use IntraJ as a standalone tool, visit the [IntraJ repository](https://github.com/lu-cs-sde/IntraJ) and follow the instructions in the [README.md](https://github.com/lu-cs-sde/IntraJ/README.md) .
+To use _IntraJ_ as a standalone tool, visit the [IntraJ repository](https://github.com/lu-cs-sde/IntraJ) and follow the instructions in the [README.md](https://github.com/lu-cs-sde/IntraJ/README.md).
+
+Alternatively, from the root of the repository (i.e., `IntraJ-LSP`), run the following command:
+```
+cd IntraJ  
+``` 
+and follow the instructions in the [README.md](IntraJ/README.md).
+ 
 
 ## Integration of IntraJ in CodeProber
 To use IntraJ in CodeProber, visit the following [webpage](https://zenodo.org/record/7185243) and follow
