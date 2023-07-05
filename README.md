@@ -62,6 +62,13 @@ Move to the **IntraJ-LSP** directory:
 cd IntraJ-LSP
 ```
 
+Recusively clone all the submodule
+
+```
+git submodule update --init --recursive
+```
+
+
 Build the extension using the following command:
 
 ```
